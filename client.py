@@ -6,25 +6,6 @@ import todo_pb2_grpc
 if __name__ == '__main__':
     channel = grpc.insecure_channel('localhost:8081')
     client = todo_pb2_grpc.apiStub(channel)
-    #
-    # responseone = client.getAll(todo_pb2.empty())
-    # print(responseone)
-    # responseaddone = client.addTodo(todo_pb2.todoValue(todoValue='two'))
-    # print(responseaddone)
-    # responseaddone = client.addTodo(todo_pb2.todoValue(todoValue='three'))
-    # print(responseaddone)
-    # responsegetone = client.getTodo(todo_pb2.id(id=2))
-    # print(responsegetone)
-    # responseone = client.getAll(todo_pb2.empty())
-    # print(responseone)
-    # try:
-    #     resp = client.delTodo(todo_pb2.todoValue(todoValue='one'))
-    #     print(resp)
-    # except:
-    #     print("Your todo doesn't have this todo yet")
-    #
-    # responseone = client.getAll(todo_pb2.empty())
-    # print(responseone)
 
     while True:
         print('Enter 1 to add todo,'
